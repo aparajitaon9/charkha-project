@@ -18,6 +18,29 @@
   --border:    rgba(255,255,255,0.08);
 }
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LIGHT MODE TOKENS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+[data-theme="light"] {
+  --ink:    #FDF6EC;
+  --ink2:   #F7EDD8;
+  --ink3:   #F0E4C8;
+  --ivory:  #1A1209;
+  --cream:  #261C10;
+  --muted:  #6B5A45;
+  --border: rgba(0,0,0,0.08);
+}
+[data-theme="light"] body {
+  background: var(--ink);
+  color: var(--ivory);
+}
+[data-theme="light"] nav {
+  background: rgba(253,246,236,0.92);
+}
+[data-theme="light"] .mobile-nav {
+  background: #FDF6EC;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    RESET & BASE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
