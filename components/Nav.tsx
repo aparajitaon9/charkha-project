@@ -21,16 +21,18 @@ export default function Nav() {
           <li><Link href="/articles">Read</Link></li>
           <li><Link href="/#newsletter" className="nav-cta">Newsletter ↗</Link></li>
         </ul>
-        <ThemeToggle />
-        <button
-          className="hamburger"
-          onClick={() => setOpen(v => !v)}
-          aria-label="Toggle navigation"
-        >
-          <span style={open ? { transform: 'rotate(45deg) translate(5px,5px)' } : {}} />
-          <span style={open ? { opacity: 0 } : {}} />
-          <span style={open ? { transform: 'rotate(-45deg) translate(5px,-5px)' } : {}} />
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <ThemeToggle />
+          <button
+            className="hamburger"
+            onClick={() => setOpen(v => !v)}
+            aria-label="Toggle navigation"
+          >
+            <span style={open ? { transform: 'rotate(45deg) translate(5px,5px)' } : {}} />
+            <span style={open ? { opacity: 0 } : {}} />
+            <span style={open ? { transform: 'rotate(-45deg) translate(5px,-5px)' } : {}} />
+          </button>
+        </div>
       </div>
       <div className={`mobile-nav${open ? ' open' : ''}`}>
         <Link href="/sacred-india" onClick={() => setOpen(false)}>Sacred India</Link>
