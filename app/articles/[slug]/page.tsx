@@ -112,10 +112,46 @@ export default async function ArticlePage({ params }: Props) {
             </p>
           )}
 
-          <div
-            className="article-body"
-            dangerouslySetInnerHTML={{ __html: article.bodyHtml }}
-          />
+          {article.isStub ? (
+            <div style={{
+              borderLeft: '3px solid var(--saffron)',
+              background: 'rgba(244,115,31,0.06)',
+              borderRadius: '0 8px 8px 0',
+              padding: '28px 32px',
+              marginTop: '8px',
+            }}>
+              <div style={{ fontSize: '22px', marginBottom: '12px' }}>🪡</div>
+              <p style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: '20px',
+                color: 'var(--ivory)',
+                marginBottom: '10px',
+              }}>
+                Story being weaved...
+              </p>
+              <p style={{
+                fontSize: '15px',
+                color: 'var(--muted)',
+                lineHeight: 1.65,
+                marginBottom: '20px',
+              }}>
+                This piece is being researched. The Charkha spins slowly — but what it makes lasts.
+                Subscribe to know when it&apos;s ready.
+              </p>
+              <a
+                href="/#newsletter"
+                className="btn-primary"
+                style={{ fontSize: '13px', padding: '10px 20px', display: 'inline-block' }}
+              >
+                Newsletter ↗
+              </a>
+            </div>
+          ) : (
+            <div
+              className="article-body"
+              dangerouslySetInnerHTML={{ __html: article.bodyHtml }}
+            />
+          )}
 
           {/* Navigation */}
           <div
