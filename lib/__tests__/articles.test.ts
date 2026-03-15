@@ -30,7 +30,7 @@ describe('getAllArticles', () => {
 
 describe('getArticleBySlug', () => {
   it('returns article with bodyHtml for valid slug', async () => {
-    const article = await getArticleBySlug('why-varanasi')
+    const article = await getArticleBySlug('why-varanasi-is-not-what-you-think-it-is')
     expect(article).not.toBeNull()
     expect(article?.title).toBe('Why Varanasi is not what you think it is')
     expect(article?.bodyHtml).toContain('<p>')
@@ -38,6 +38,11 @@ describe('getArticleBySlug', () => {
 
   it('returns null for unknown slug', async () => {
     expect(await getArticleBySlug('nonexistent-slug')).toBeNull()
+  })
+
+  it('isStub is true for articles with placeholder body', async () => {
+    const article = await getArticleBySlug('why-varanasi-is-not-what-you-think-it-is')
+    expect(article?.isStub).toBe(true)
   })
 })
 

@@ -18,6 +18,7 @@ export type Article = {
 
 export type ArticleWithBody = Article & {
   bodyHtml: string
+  isStub: boolean
 }
 
 export function getAllArticles(): Article[] {
@@ -69,6 +70,7 @@ export async function getArticleBySlug(
       : new Date().toISOString(),
     featured: (data.featured as boolean) || false,
     bodyHtml: processed.toString(),
+    isStub: content.includes('coming soon'),
   }
 }
 
