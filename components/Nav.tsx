@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import ThemeToggle from './ThemeToggle'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -20,6 +21,7 @@ export default function Nav() {
           <li><Link href="/articles">Read</Link></li>
           <li><Link href="/#newsletter" className="nav-cta">Newsletter ↗</Link></li>
         </ul>
+        <ThemeToggle />
         <button
           className="hamburger"
           onClick={() => setOpen(v => !v)}
