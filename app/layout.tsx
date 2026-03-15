@@ -53,6 +53,7 @@ export default function RootLayout({
       lang="en"
       className={`${yatra.variable} ${dmSans.variable} ${playfair.variable}`}
     >
+      <script dangerouslySetInnerHTML={{ __html: `(function(){var s=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',s||p);})();` }} />
       <body>
         <RainbowBar />
         <Nav />
