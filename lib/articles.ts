@@ -26,7 +26,8 @@ export function getAllArticles(): Article[] {
   return files
     .map(filename => {
       const raw = fs.readFileSync(path.join(articlesDir, filename), 'utf-8')
-      const { data } = matter(raw)
+      const { data, content } = matter(raw)
+      if (content.includes('coming soon')) return null
       return {
         slug: (data.slug as string) || filename.replace('.md', ''),
         title: data.title as string,
@@ -39,6 +40,7 @@ export function getAllArticles(): Article[] {
         featured: (data.featured as boolean) || false,
       }
     })
+    .filter((a): a is Article => a !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
@@ -57,6 +59,9 @@ export async function getArticleBySlug(
 
   const raw = fs.readFileSync(path.join(articlesDir, filename), 'utf-8')
   const { data, content } = matter(raw)
+
+  if (content.includes('coming soon')) return null
+
   const processed = await remark().use(html).process(content)
 
   return {
@@ -70,7 +75,7 @@ export async function getArticleBySlug(
       : new Date().toISOString(),
     featured: (data.featured as boolean) || false,
     bodyHtml: processed.toString(),
-    isStub: content.includes('coming soon'),
+    isStub: false,
   }
 }
 

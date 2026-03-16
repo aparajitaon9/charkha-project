@@ -2,7 +2,6 @@ import { getAllArticles, getFeaturedArticle } from '@/lib/articles'
 import { PILLARS } from '@/lib/pillars'
 import ArticleCard from '@/components/ArticleCard'
 import PillarCard from '@/components/PillarCard'
-import YTCard from '@/components/YTCard'
 import NewsletterSection from '@/components/NewsletterSection'
 import type { Metadata } from 'next'
 
@@ -10,33 +9,16 @@ export const metadata: Metadata = {
   title: 'The Charkha Project — India, Researched Not Visited',
 }
 
-const YT_VIDEOS = [
-  {
-    title: 'Why Varanasi is not what you think it is',
-    category: 'Sacred India',
-    duration: '12:34',
-    gradientClass: 'yth1',
-  },
-  {
-    title: 'The mythology behind the Kumbh Mela',
-    category: 'Mythology',
-    duration: '15:02',
-    gradientClass: 'yth2',
-  },
-  {
-    title: 'The real reason India has 30+ million gods',
-    category: 'Mythology',
-    duration: '11:18',
-    gradientClass: 'yth3',
-  },
-]
-
 export default function HomePage() {
   const allArticles = getAllArticles()
   const featured = getFeaturedArticle() ?? allArticles[0]
   const row1Secondary = allArticles.filter(a => a.slug !== featured.slug).slice(0, 2)
   const row2 = allArticles.filter(a => a.slug !== featured.slug).slice(2, 5)
   const totalCount = allArticles.length
+
+  const pillarCounts = Object.fromEntries(
+    PILLARS.map(p => [p.slug, allArticles.filter(a => a.pillar === p.slug).length])
+  )
 
   return (
     <main>
@@ -88,7 +70,7 @@ export default function HomePage() {
             <div className="stat-label">Deep articles</div>
           </div>
           <div className="stat-item reveal reveal-delay-1">
-            <div className="stat-num" data-count="50">0</div>
+            <div className="stat-num" data-count="0">0</div>
             <div className="stat-label">YouTube videos</div>
           </div>
           <div className="stat-item reveal reveal-delay-2">
@@ -112,7 +94,7 @@ export default function HomePage() {
           </div>
           <div className="pillars-grid reveal">
             {PILLARS.slice(0, 4).map((pillar, i) => (
-              <PillarCard key={pillar.slug} pillar={pillar} index={i} />
+              <PillarCard key={pillar.slug} pillar={pillar} index={i} count={pillarCounts[pillar.slug]} />
             ))}
           </div>
         </div>
@@ -157,12 +139,7 @@ export default function HomePage() {
               All videos <span>→</span>
             </a>
           </div>
-          <div className="yt-grid reveal">
-            {YT_VIDEOS.map(v => (
-              <YTCard key={v.title} {...v} />
-            ))}
-          </div>
-          <div className="yt-channel-bar reveal reveal-delay-1">
+          <div className="yt-channel-bar reveal">
             <div className="yt-channel-info">
               <div className="yt-avatar">CP</div>
               <div className="yt-channel-text">
