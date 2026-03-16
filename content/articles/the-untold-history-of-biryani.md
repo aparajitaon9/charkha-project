@@ -8,6 +8,11 @@ date: 2025-01-20
 featured: false
 ---
 
+![Biryani being cooked in clay dum pots, steam rising from the sealed vessel](https://upload.wikimedia.org/wikipedia/commons/c/c3/Murg_Dhum_Biriyani_cooked_in_mud_pots3.jpg)
+*Chicken dum biryani sealed and cooked in traditional clay pots. Photo: Wikimedia Commons (CC BY-SA)*
+
+---
+
 Somewhere in Old Delhi right now, a man is lifting the lid off a deg.
 
 The deg is a wide-mouthed copper vessel the size of a small bathtub. It has been sitting over low heat for four hours, sealed with a ring of dough to trap every particle of steam inside. When the lid comes off, the aroma does something that defies rational description: saffron and caramelised onion and meat fat and whole cardamom and something underneath all of that, something ancient and fermented and deep, hitting the air all at once.
@@ -46,6 +51,9 @@ Which leads directly to the question the second theory is really asking: what ex
 
 ## Theory 2: The Mughals invented it in India
 
+![Jahangir's Darbar, the Mughal court of Emperor Jahangir, painted ca. 1620. Courtiers, musicians, and attendants surround the emperor in a scene of imperial splendour.](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jahangir%27s-Darbar%2C_ca._1620%2C_The_David_Collection%2C_Kopenhagen.jpg/800px-Jahangir%27s-Darbar%2C_ca._1620%2C_The_David_Collection%2C_Kopenhagen.jpg)
+*Jahangir's Darbar, ca. 1620. The royal kitchen that refined biryani into a court cuisine. The David Collection, Copenhagen. Public domain.*
+
 The court-cuisine theory is the one that gets the most airtime in restaurants and food magazines. The Mughals arrived, their Persian-influenced chefs met local Indian spice traditions, and biryani was the result, a synthesis so successful it became the defining dish of an entire subcontinent.
 
 Food writer and journalist Vir Sanghvi spent years researching biryani and arrived at a pointed conclusion: the Mughals did not *bring* biryani to India. The dish was known here before Babur crossed the Khyber Pass. What the Mughal court did was transform it into high cuisine, elevated with saffron, perfumed with rosewater and kewra, served in sealed copper handis to audiences who understood that what they were eating was power made edible.
@@ -57,6 +65,9 @@ But if not the Mughals, then who? The answer that most Indian food writing refus
 ---
 
 ## Theory 3: The oldest biryani was Tamil
+
+![Brihadeeswara Temple, Thanjavur, Tamil Nadu. Built by the Chola dynasty in the 11th century CE, the same civilisation whose soldiers ate ūn sōru on the battlefield two thousand years ago.](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Thanjavur_Brihadeeswarar_temple.jpg/1280px-Thanjavur_Brihadeeswarar_temple.jpg)
+*Brihadeeswara Temple, Thanjavur. Built by the Chola dynasty, whose soldiers ate ūn sōru, rice cooked with meat and spices, centuries before the Mughals arrived. Photo: Wikimedia Commons (CC BY-SA)*
 
 This is the theory most Indian food writing ignores, possibly because it disrupts a comfortable north-Indian-court narrative.
 
@@ -114,6 +125,9 @@ Which is why the seventh and final theory feels less like a theory and more like
 
 ## Theory 7: Biryani is simply what happens to rice near power
 
+![Hyderabadi biryani served with raita, mirchi ka salan, and salad. The saffron-gold rice and Nizam's-era presentation are hallmarks of one of India's most iconic regional biryanis.](https://upload.wikimedia.org/wikipedia/commons/9/95/Hyderabadi_Biryani_with_Raita%2C_Mirchi_Ka_Salan_and_Salad.JPG)
+*Hyderabadi dum biryani, the Nizam's version, sealed with dough and cooked kachchi. One of at least six major regional biryanis across India. Photo: Wikimedia Commons (CC BY-SA)*
+
 The food historian Colleen Taylor Sen offers what may be the most honest framing of all. Biryani is not a dish that was invented. It is a dish that *became*, through the collision of Persian pilaf technique, South Asian spice culture, military logistical necessity, and the extraordinary appetite of royal courts for culinary distinction.
 
 The *Ain-i-Akbari* lists it alongside pulao as if the two are almost the same thing. Achaya notes that even in 1590, the distinction between biryani and pulao was largely semantic: biryani suggested layering and grander occasion; pulao meant everything cooked together. The difference was of register, not of kind.
@@ -140,12 +154,17 @@ None of these additions diminished what was already there.
 
 They deepened it.
 
+---
+
+![Awadhi mutton biryani from Lucknow, the fragrant, subtly spiced biryani that Nawab Wajid Ali Shah carried into exile, and which became the ancestor of Kolkata biryani.](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Awadhi_mutton_biryani.jpg/1280px-Awadhi_mutton_biryani.jpg)
+*Awadhi mutton biryani, Lucknow. The tradition Wajid Ali Shah carried to Calcutta in 1856. The potato came later. Photo: Wikimedia Commons (CC BY-SA)*
+
 And somewhere in Old Delhi, the man with the deg has just lifted the lid. The line is still moving. No one is keeping track of where the recipe originally came from.
 
 They just know it's worth the wait.
 
 ---
 
-*Read next: Why chai is not tea — the economics, ritual, and cultural weight of a drink that holds India together.*
+*Read next: Why chai is not tea. The economics, ritual, and cultural weight of a drink that holds India together.*
 
 *All articles on The Charkha Project are research-led. Primary sources for this piece include K.T. Achaya's* A Historical Dictionary of Indian Food, *Colleen Taylor Sen's* Feasts and Fasts, *the* Ain-i-Akbari *(Abu'l Fazl, 1590), Sahapedia's oral history archive, and interviews with Manzilat Fatima as reported in The Better India and Diaspora Co.*

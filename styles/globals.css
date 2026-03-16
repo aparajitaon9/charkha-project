@@ -1140,3 +1140,17 @@ footer {
 .article-body li { margin-bottom: 10px; }
 .article-body a { color: var(--saffron); text-decoration: underline; }
 .article-body a:hover { color: var(--turmeric); }
+.article-body img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 32px 0 8px;
+  display: block;
+}
+.article-body img + em {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: normal;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
