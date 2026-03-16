@@ -6,6 +6,7 @@ excerpt: "Not Mughal, not simple — the 7 disputed origin stories of India's mo
 readTime: 12
 date: 2025-01-20
 featured: false
+coverImage: /images/articles/biryani-cover.jpg
 ---
 
 ![Biryani being cooked in clay dum pots, steam rising from the sealed vessel](https://upload.wikimedia.org/wikipedia/commons/c/c3/Murg_Dhum_Biriyani_cooked_in_mud_pots3.jpg)

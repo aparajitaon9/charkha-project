@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Article } from '@/lib/articles'
 import { PILLARS } from '@/lib/pillars'
 
@@ -16,9 +17,18 @@ export default function ArticleCard({ article, featured = false }: Props) {
       href={`/articles/${article.slug}`}
       className={`article-card${featured ? ' featured' : ''}`}
     >
-      <div className={`article-card-hero ${accentClass}`}>
-        <span className="card-cat-badge">{pillar?.name ?? article.pillar}</span>
-        <span className="card-read-time">{article.readTime} min</span>
+      <div className={`article-card-hero ${accentClass}`} style={{ position: 'relative' }}>
+        {article.coverImage && (
+          <Image
+            src={article.coverImage}
+            alt={article.title}
+            fill
+            style={{ objectFit: 'cover', opacity: 0.85 }}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        )}
+        <span className="card-cat-badge" style={{ position: 'relative', zIndex: 1 }}>{pillar?.name ?? article.pillar}</span>
+        <span className="card-read-time" style={{ position: 'relative', zIndex: 1 }}>{article.readTime} min</span>
       </div>
       <div className="card-body">
         <h3 className="card-title">{article.title}</h3>

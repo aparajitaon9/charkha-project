@@ -14,6 +14,7 @@ export type Article = {
   readTime: number
   date: string
   featured: boolean
+  coverImage?: string
 }
 
 export type ArticleWithBody = Article & {
@@ -38,6 +39,7 @@ export function getAllArticles(): Article[] {
           ? new Date(data.date).toISOString()
           : new Date().toISOString(),
         featured: (data.featured as boolean) || false,
+        coverImage: (data.coverImage as string) || undefined,
       }
     })
     .filter((a): a is Article => a !== null)
@@ -74,6 +76,7 @@ export async function getArticleBySlug(
       ? new Date(data.date).toISOString()
       : new Date().toISOString(),
     featured: (data.featured as boolean) || false,
+    coverImage: (data.coverImage as string) || undefined,
     bodyHtml: processed.toString(),
     isStub: false,
   }
