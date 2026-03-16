@@ -25,11 +25,11 @@ export type ArticleWithBody = Article & {
 export function getAllArticles(): Article[] {
   const files = fs.readdirSync(articlesDir).filter(f => f.endsWith('.md'))
   return files
-    .map(filename => {
+    .flatMap(filename => {
       const raw = fs.readFileSync(path.join(articlesDir, filename), 'utf-8')
       const { data, content } = matter(raw)
-      if (content.includes('coming soon')) return null
-      return {
+      if (content.includes('coming soon')) return []
+      return [{
         slug: (data.slug as string) || filename.replace('.md', ''),
         title: data.title as string,
         pillar: data.pillar as string,
@@ -40,9 +40,8 @@ export function getAllArticles(): Article[] {
           : new Date().toISOString(),
         featured: (data.featured as boolean) || false,
         coverImage: (data.coverImage as string) || undefined,
-      }
+      }]
     })
-    .filter((a): a is Article => a !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
