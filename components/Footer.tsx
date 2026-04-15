@@ -1,20 +1,17 @@
 import Link from 'next/link'
-import RainbowBar from './RainbowBar'
 
 export default function Footer() {
   return (
     <footer>
       <div className="footer-inner">
-        <RainbowBar style={{ marginBottom: '48px', borderRadius: '4px' }} />
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              <div className="nav-logo-dot" />
               The Charkha Project
             </div>
             <p className="footer-tagline">
-              Spinning India&apos;s stories into something worth reading. Research-led
-              content about India&apos;s food, mythology, sacred places, and hidden cultures.
+              Deep research into India&apos;s food, mythology, sacred places,
+              and hidden cultures. For the globally curious.
             </p>
             <div className="footer-social">
               <a
@@ -41,7 +38,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <div className="footer-col-title">Pillars</div>
+            <div className="footer-col-title">Explore</div>
             <ul className="footer-links">
               <li><Link href="/sacred-india">Sacred India</Link></li>
               <li><Link href="/mythology">Mythology</Link></li>
@@ -60,17 +57,12 @@ export default function Footer() {
               </li>
               <li>
                 <a href="https://youtube.com/@thecharkhaproject" target="_blank" rel="noopener noreferrer">
-                  Sacred India Playlist
+                  Sacred India
                 </a>
               </li>
               <li>
                 <a href="https://youtube.com/@thecharkhaproject" target="_blank" rel="noopener noreferrer">
-                  Mythology Playlist
-                </a>
-              </li>
-              <li>
-                <a href="https://youtube.com/@thecharkhaproject" target="_blank" rel="noopener noreferrer">
-                  Food Playlist
+                  Mythology
                 </a>
               </li>
             </ul>
@@ -81,13 +73,12 @@ export default function Footer() {
               <li><Link href="/#newsletter">Newsletter</Link></li>
               <li><Link href="/about">About</Link></li>
               <li><a href="mailto:hello@thecharkhaproject.com">Contact</a></li>
-              <li><a href="#">Work with us</a></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2025 The Charkha Project. All rights reserved.</span>
-          <span>Built with curiosity. Powered by research. <a href="#">Privacy</a></span>
+          <span>&copy; 2026 The Charkha Project</span>
+          <span><a href="#">Privacy</a></span>
         </div>
       </div>
     </footer>

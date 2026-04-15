@@ -30,41 +30,40 @@ export default async function PillarPage({ params }: Props) {
   return (
     <main>
       {/* Pillar hero */}
-      <section className="pillars-section" style={{ paddingTop: '120px', paddingBottom: '60px' }}>
-        <div className="section-inner">
-          <div className={`section-eyebrow ${pillar.numClass}`}>
-            {pillar.icon} Content pillar
-          </div>
-          <h1 className="section-title" style={{ marginBottom: '16px' }}>
-            {pillar.name}
-          </h1>
-          <p
-            style={{
-              fontSize: '16px',
-              color: 'var(--muted)',
-              maxWidth: '580px',
-              lineHeight: 1.75,
-              fontWeight: 300,
-            }}
-          >
-            {pillar.description}
-          </p>
-        </div>
-      </section>
+      <div className="article-hero">
+        <div className="section-label">{pillar.icon} Content Pillar</div>
+        <h1 className="article-hero-title">{pillar.name}</h1>
+        <p
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '1.05rem',
+            color: 'var(--temple-grey)',
+            maxWidth: '540px',
+            lineHeight: 2,
+            textAlign: 'center',
+          }}
+        >
+          {pillar.description}
+        </p>
+      </div>
 
       {/* Articles */}
-      <section style={{ padding: '40px 32px 100px' }}>
-        <div className="section-inner">
-          <div className="section-head" style={{ marginBottom: '32px' }}>
-            <p style={{ fontSize: '13px', color: 'var(--muted)' }}>
-              {articles.length} {articles.length === 1 ? 'story' : 'stories'}
-            </p>
-          </div>
-
-          <div
-            className="articles-row2"
-            style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}
+      <section style={{ padding: '48px 32px 100px' }}>
+        <div className="section-inner" style={{ maxWidth: '1000px' }}>
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.65rem',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase' as const,
+              color: 'var(--ash)',
+              marginBottom: '32px',
+            }}
           >
+            {articles.length} {articles.length === 1 ? 'story' : 'stories'}
+          </p>
+
+          <div className="articles-grid">
             {articles.map(article => (
               <ArticleCard key={article.slug} article={article} />
             ))}
@@ -73,14 +72,15 @@ export default async function PillarPage({ params }: Props) {
           {articles.length === 0 && (
             <p
               style={{
-                color: 'var(--muted)',
+                color: 'var(--ash)',
                 textAlign: 'center',
                 padding: '60px 0',
-                fontSize: '15px',
+                fontFamily: 'var(--font-display)',
+                fontSize: '1.1rem',
               }}
             >
               Stories coming soon.{' '}
-              <a href="/#newsletter" style={{ color: 'var(--saffron)' }}>
+              <a href="/#newsletter" style={{ color: 'var(--brass)' }}>
                 Subscribe to be notified.
               </a>
             </p>

@@ -34,116 +34,44 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <main>
-      {/* Article hero banner */}
-      <div
-        className={`article-card-hero ${pillar?.accentClass ?? 'ac-sacred'}`}
-        style={{
-          height: '340px',
-          display: 'flex',
-          alignItems: 'flex-end',
-          padding: '48px 32px',
-          position: 'relative',
-        }}
-      >
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 1,
-            maxWidth: '800px',
-            margin: '0 auto',
-            width: '100%',
-          }}
-        >
-          <Link
-            href={`/${article.pillar}`}
-            className="card-cat-badge"
-            style={{ marginBottom: '20px', display: 'inline-block' }}
-          >
-            {pillar?.name ?? article.pillar}
-          </Link>
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(28px, 4vw, 52px)',
-              color: 'var(--ivory)',
-              lineHeight: 1.1,
-              marginBottom: '16px',
-            }}
-          >
-            {article.title}
-          </h1>
-          <div
-            style={{
-              fontSize: '13px',
-              color: 'rgba(255,255,255,0.55)',
-              display: 'flex',
-              gap: '20px',
-            }}
-          >
-            <span>{article.readTime} min read</span>
-            <span>
-              {new Date(article.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </span>
-          </div>
+      {/* Article hero — full-screen title card */}
+      <div className="article-hero">
+        <Link href={`/${article.pillar}`} className="article-hero-pillar">
+          {pillar?.name ?? article.pillar}
+        </Link>
+        <h1 className="article-hero-title">{article.title}</h1>
+        <div className="article-hero-meta">
+          <span>{article.readTime} min read</span>
+          <span>
+            {new Date(article.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </span>
         </div>
       </div>
 
       {/* Article body */}
       <section style={{ padding: '64px 32px 100px' }}>
-        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
           {article.excerpt && (
-            <p
-              style={{
-                fontFamily: 'var(--font-serif)',
-                fontStyle: 'italic',
-                fontSize: 'clamp(17px, 2vw, 21px)',
-                color: 'var(--muted)',
-                lineHeight: 1.65,
-                marginBottom: '48px',
-                paddingBottom: '48px',
-                borderBottom: '1px solid var(--border)',
-              }}
-            >
+            <p className="article-excerpt-block">
               {article.excerpt}
             </p>
           )}
 
           {article.isStub ? (
-            <div style={{
-              borderLeft: '3px solid var(--saffron)',
-              background: 'rgba(244,115,31,0.06)',
-              borderRadius: '0 8px 8px 0',
-              padding: '28px 32px',
-              marginTop: '8px',
-            }}>
-              <div style={{ fontSize: '22px', marginBottom: '12px' }}>🪡</div>
-              <p style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: '20px',
-                color: 'var(--ivory)',
-                marginBottom: '10px',
-              }}>
-                Story being weaved...
+            <div className="article-stub">
+              <p className="article-stub-title">
+                Story being woven...
               </p>
-              <p style={{
-                fontSize: '15px',
-                color: 'var(--muted)',
-                lineHeight: 1.65,
-                marginBottom: '20px',
-              }}>
-                This piece is being researched. The Charkha spins slowly — but what it makes lasts.
-                Subscribe to know when it&apos;s ready.
+              <p className="article-stub-text">
+                This piece is being researched. The Charkha spins slowly,
+                but what it makes lasts. Subscribe to know when it&apos;s ready.
               </p>
-              <a
-                href="/#newsletter"
-                className="btn-primary"
-                style={{ fontSize: '13px', padding: '10px 20px', display: 'inline-block' }}
-              >
-                Newsletter ↗
+              <a href="/#newsletter" className="btn-primary">
+                Newsletter
               </a>
             </div>
           ) : (
@@ -154,30 +82,13 @@ export default async function ArticlePage({ params }: Props) {
           )}
 
           {/* Navigation */}
-          <div
-            style={{
-              marginTop: '64px',
-              paddingTop: '32px',
-              borderTop: '1px solid var(--border)',
-              display: 'flex',
-              gap: '12px',
-              flexWrap: 'wrap',
-            }}
-          >
-            <Link
-              href="/articles"
-              className="btn-secondary"
-              style={{ padding: '10px 20px', fontSize: '13px' }}
-            >
-              ← All articles
+          <div className="article-nav">
+            <Link href="/articles" className="btn-secondary">
+              &larr; All stories
             </Link>
             {pillar && (
-              <Link
-                href={`/${article.pillar}`}
-                className="btn-secondary"
-                style={{ padding: '10px 20px', fontSize: '13px' }}
-              >
-                More {pillar.name} →
+              <Link href={`/${article.pillar}`} className="btn-secondary">
+                More {pillar.name} &rarr;
               </Link>
             )}
           </div>

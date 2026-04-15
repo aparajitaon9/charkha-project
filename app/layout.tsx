@@ -1,32 +1,22 @@
 import type { Metadata } from 'next'
-import { Yatra_One, DM_Sans, Playfair_Display } from 'next/font/google'
+import { Cormorant_Garamond, Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import RainbowBar from '@/components/RainbowBar'
 import ClientScripts from '@/components/ClientScripts'
 
-// next/font self-hosts fonts and injects CSS variables.
-// Variable names match the token names used in globals.css.
-const yatra = Yatra_One({
-  weight: '400',
+const cormorant = Cormorant_Garamond({
+  weight: ['300', '400', '600'],
   subsets: ['latin'],
+  style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  weight: ['300', '400'],
   variable: '--font-body',
-  display: 'swap',
-})
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-serif',
   display: 'swap',
 })
 
@@ -51,13 +41,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${yatra.variable} ${dmSans.variable} ${playfair.variable}`}
+      className={`${cormorant.variable} ${inter.variable}`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var s=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',s||p);})();` }} />
-      </head>
       <body>
-        <RainbowBar />
         <Nav />
         {children}
         <Footer />

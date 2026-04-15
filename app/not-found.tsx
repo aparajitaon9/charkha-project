@@ -9,14 +9,16 @@ export default function NotFound() {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '40px 32px',
+        background: 'var(--marble)',
       }}
     >
       <div style={{ textAlign: 'center', maxWidth: '480px' }}>
         <div
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: '80px',
-            color: 'var(--saffron)',
+            fontWeight: 300,
+            fontSize: '5rem',
+            color: 'var(--stone)',
             lineHeight: 1,
             marginBottom: '16px',
           }}
@@ -26,8 +28,9 @@ export default function NotFound() {
         <h1
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: '28px',
-            color: 'var(--ivory)',
+            fontWeight: 300,
+            fontSize: '1.5rem',
+            color: 'var(--deep-stone)',
             marginBottom: '16px',
           }}
         >
@@ -35,15 +38,14 @@ export default function NotFound() {
         </h1>
         <p
           style={{
-            color: 'var(--muted)',
-            fontSize: '15px',
-            lineHeight: 1.7,
+            fontFamily: 'var(--font-display)',
+            color: 'var(--temple-grey)',
+            fontSize: '1rem',
+            lineHeight: 1.9,
             marginBottom: '32px',
-            fontWeight: 300,
           }}
         >
-          The page you&apos;re looking for has either moved or never existed. Try
-          exploring from the home page.
+          The page you&apos;re looking for has either moved or never existed.
         </p>
         <div
           style={{
@@ -54,10 +56,10 @@ export default function NotFound() {
           }}
         >
           <Link href="/" className="btn-primary">
-            Back to home ↗
+            Back to home
           </Link>
           <Link href="/articles" className="btn-secondary">
-            Browse all articles
+            Browse stories
           </Link>
         </div>
       </div>
